@@ -34,7 +34,7 @@
           #binding-cells = <0>;
           tapping-term-ms = <1000>;
           /delete-property/ tapping-term-ms;
-          bindings = <&skq LSHIFT>, <&kt LSHIFT>, <&kt LSHIFT>;
+          bindings = <&skq LSHFT>, <&kt LSHFT>, <&kt LSHFT>;
       };
     };
 
