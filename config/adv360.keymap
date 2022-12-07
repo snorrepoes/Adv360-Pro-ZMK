@@ -23,9 +23,9 @@
         label = "STICKY_KEY_QUICK_RELEASE";
         #binding-cells = <1>;
         bindings = <&kp>;
-        //release-after-ms = <1000>;
+        release-after-ms = <1000>;
         quick-release;
-        /delete-property/ release-after-ms;
+        // /delete-property/ release-after-ms;
       };
       
       phone_lshft: phone_style_lshft {
@@ -33,7 +33,7 @@
           label = "PHONE_STYLE_LSHFT";
           #binding-cells = <0>;
           tapping-term-ms = <1000>;
-          /delete-property/ tapping-term-ms;
+          // /delete-property/ tapping-term-ms;
           bindings = <&skq LSHFT>, <&kt LSHFT>, <&kt LSHFT>;
       };
     };
