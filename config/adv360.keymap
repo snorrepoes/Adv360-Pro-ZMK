@@ -31,7 +31,7 @@
       phone_lshft: phone_style_lshft {
           compatible = "zmd,behavior-tap-dance";
           label = "PHONE_STYLE_LSHFT";
-          #binding-cells = <0>;
+          #binding-cells = <3>;
           tapping-term-ms = <1000>;
           /delete-property/ tapping-term-ms;
           bindings = <&skq LSHFT>, <&kt LSHFT>, <&kt LSHFT>;
