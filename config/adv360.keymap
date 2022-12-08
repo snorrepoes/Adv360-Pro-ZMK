@@ -6,10 +6,6 @@
 
 / {
 
-	&sl {
-		release-after-ms = <9999>;
-	};
-	
     behaviors {
       #include "macros.dtsi"
 
@@ -78,6 +74,10 @@
 		};
     };
 	*/
+
+	&sl {
+		release-after-ms = <9999>;
+	};
 
   keymap {
     compatible = "zmk,keymap";
