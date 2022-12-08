@@ -4,6 +4,10 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/backlight.h>
 
+&sl {
+    release-after-ms = <2000>;
+};
+
 / {
 
     behaviors {
@@ -74,10 +78,6 @@
 		};
     };
 	*/
-
-	&sl {
-		release-after-ms = <9999>;
-	};
 
   keymap {
     compatible = "zmk,keymap";
