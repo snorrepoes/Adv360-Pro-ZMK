@@ -45,18 +45,28 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &skq LSHFT>
-                , <&macro_tap &sl 4>
+                = <&macro_tap &sl 4>
+				, <&macro_tap &skq LSHFT>
                 ;
         };
 		
-		tog_shiftlocked_layer: tog_shiftlocked_layer {
+		to_shiftlocked_layer: tog_shiftlocked_layer {
 			label = "Toggle shiftlocked layer";
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
 			bindings
-                = <&macro_tap &kt LSHFT>
-                , <&macro_tap &tog 5>
+                = <&macro_tap &to 5>
+                , <&macro_tap &kt RSHFT>
+                ;
+		};
+		
+		to_default_layer: tog_default_layer {
+			label = "Back to default layer";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+                = <&macro_tap &to 0>
+                , <&macro_tap &kt RSHFT>
                 ;
 		};
     };
@@ -101,13 +111,12 @@
       >;
     };
 	
-	/*
     shift_enabled_layer {
       bindings = <
         &trans &trans &trans &trans &trans &trans &trans &trans                                                      &trans &trans &trans &trans  &trans  &trans &trans
-        &trans &kp X &trans &trans &trans &trans  &none                                                       &none &trans &trans &trans &trans  &trans  &trans
+        &trans &trans &trans &trans &trans &trans  &none                                                       &none &trans &trans &trans &trans  &trans  &trans
         &trans &trans &trans &trans &trans &trans  &none        &trans &trans             &trans &trans        &none &trans &trans &trans &trans  &trans  &trans
-        &tog_shiftlocked_layer &trans &trans &trans &trans &trans        &none  &none  &trans &none &none &trans &none  &none        &trans &trans &trans &trans  &trans  &trans
+        &to_shiftlocked_layer &trans &trans &trans &trans &trans        &none  &none  &trans &none &none &trans &none  &none        &trans &trans &trans &trans  &trans  &trans
         &trans &trans &trans &trans &trans               &trans &trans &trans             &trans &trans &trans              &trans &trans &trans  &trans  &trans
       >;
     };
@@ -115,12 +124,11 @@
 	shiftlocked_layer {
       bindings = <
         &trans &trans &trans &trans &trans &trans &trans &trans                                                      &trans &trans &trans &trans  &trans  &trans &trans
-        &trans &kp Y &trans &trans &trans &trans  &none                                                       &none &trans &trans &trans &trans  &trans  &trans
+        &trans &trans &trans &trans &trans &trans  &none                                                       &none &trans &trans &trans &trans  &trans  &trans
         &trans &trans &trans &trans &trans &trans  &none        &trans &trans             &trans &trans        &none &trans &trans &trans &trans  &trans  &trans
-        &tog_shiftlocked_layer &trans &trans &trans &trans &trans        &none  &none  &trans &none &none &trans &none  &none        &trans &trans &trans &trans  &trans  &trans
+        &to_default_layer &trans &trans &trans &trans &trans        &none  &none  &trans &none &none &trans &none  &none        &trans &trans &trans &trans  &trans  &trans
         &trans &trans &trans &trans &trans               &trans &trans &trans             &trans &trans &trans              &trans &trans &trans  &trans  &trans
       >;
-    };
-	*/	
+    };	
   };
 };
